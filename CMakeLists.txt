@@ -15,6 +15,8 @@ set(SDK_PROGRAM_DIR  "/usr/lib/libreoffice/program")
 set(SDK_LIBRARIES    "uno_sal" "uno_salhelpergcc3" "uno_purpenvhelpergcc3" "uno_cppu" "uno_cppuhelpergcc3")
 
 execute_process(COMMAND "${SDK_BINARY_DIR}/cppumaker" -Gc -O${CMAKE_BINARY_DIR}/include "${SDK_PROGRAM_DIR}/types.rdb" "${SDK_PROGRAM_DIR}/types/offapi.rdb")
+execute_process(COMMAND bash -c ${PROJECT_SOURCE_DIR}/allinone.sh OUTPUT_VARIABLE ALLINONE)
+file(WRITE "${CMAKE_BINARY_DIR}/include/allinone.h" "${ALLINONE}")
 
 include_directories(${CMAKE_BINARY_DIR}/include)
 include_directories(${SDK_INCLUDE_DIR})
