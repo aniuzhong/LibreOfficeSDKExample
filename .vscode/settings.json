@@ -4,4 +4,7 @@
             "Presentation document path"
         ]
     },
+    "files.associations": {
+        "*.hdl": "cpp"
+    },
 }
