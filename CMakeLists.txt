@@ -14,6 +14,9 @@ set(SDK_BINARY_DIR   "/usr/lib/libreoffice/sdk/bin")
 set(SDK_PROGRAM_DIR  "/usr/lib/libreoffice/program")
 set(SDK_LIBRARIES    "uno_sal" "uno_salhelpergcc3" "uno_purpenvhelpergcc3" "uno_cppu" "uno_cppuhelpergcc3")
 
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+
 execute_process(COMMAND "${SDK_BINARY_DIR}/cppumaker" -Gc -O${PROJECT_SOURCE_DIR}/include "${SDK_PROGRAM_DIR}/types.rdb" "${SDK_PROGRAM_DIR}/types/offapi.rdb")
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
@@ -24,4 +27,6 @@ add_compile_definitions(DGCC)
 add_compile_definitions(LINUX)
 add_compile_definitions(DCPPU_ENV=gcc3)
 
-add_subdirectory(src)
+add_subdirectory(src/DevelopersGuide/FirstSteps)
+add_subdirectory(src/utilities)
+

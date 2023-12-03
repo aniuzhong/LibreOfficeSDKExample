@@ -2354,7 +2354,7 @@
 #include <com/sun/star/presentation/ShapeAnimationSubType.hpp>
 #include <com/sun/star/presentation/XPresentationPage.hpp>
 #include <com/sun/star/presentation/XCustomPresentationSupplier.hpp>
-// #include <com/sun/star/presentation/XSlideShowNavigationListener.hpp> . // 7/6
+// #include <com/sun/star/presentation/XSlideShowNavigationListener.hpp>  // 7/6
 #include <com/sun/star/presentation/ClickAction.hpp>
 #include <com/sun/star/presentation/EffectCommands.hpp>
 #include <com/sun/star/presentation/AnimationSpeed.hpp>
@@ -2511,7 +2511,7 @@
 #include <com/sun/star/reflection/XIdlMethod.hpp>
 #include <com/sun/star/reflection/ParamInfo.hpp>
 #include <com/sun/star/reflection/XPropertyTypeDescription.hpp>
-// #include <com/sun/star/reflection/Dump.hpp> . // 7.6
+// #include <com/sun/star/reflection/Dump.hpp>   // 7.6
 #include <com/sun/star/reflection/XIdlField2.hpp>
 #include <com/sun/star/reflection/XIdlReflection.hpp>
 #include <com/sun/star/reflection/XInterfaceMemberTypeDescription.hpp>
@@ -2554,7 +2554,7 @@
 #include <com/sun/star/reflection/XModuleTypeDescription.hpp>
 #include <com/sun/star/reflection/InvalidTypeNameException.hpp>
 #include <com/sun/star/reflection/XServiceTypeDescription2.hpp>
-// #include <com/sun/star/reflection/XDump.hpp> . // 7.6
+// #include <com/sun/star/reflection/XDump.hpp>   // 7.6
 #include <com/sun/star/view/XMultiSelectionSupplier.hpp>
 #include <com/sun/star/view/PrintJobEvent.hpp>
 #include <com/sun/star/view/PrintableStateEvent.hpp>

@@ -1,7 +1,0 @@
-file(GLOB SOURCES "${CURRENT_SOURCE_DIR}*.cpp")
-foreach(SOURCE ${SOURCES})
-    get_filename_component(TARGET ${SOURCE} NAME_WE)
-    add_executable(${TARGET} ${SOURCE})    
-    target_link_directories(${TARGET} PRIVATE ${SDK_LIBRARY_DIR})
-    target_link_libraries(${TARGET} PRIVATE ${SDK_LIBRARIES})
-endforeach(SOURCE ${SOURCES})
