@@ -597,7 +597,7 @@
 #include <com/sun/star/datatransfer/clipboard/XClipboardManager.hpp>
 #include <com/sun/star/datatransfer/clipboard/XClipboardOwner.hpp>
 #include <com/sun/star/datatransfer/clipboard/XFlushableClipboard.hpp>
-// #include <com/sun/star/datatransfer/clipboard/LokClipboard.hpp> . // 7.6
+// #include <com/sun/star/datatransfer/clipboard/LokClipboard.hpp>  // 7.6
 #include <com/sun/star/datatransfer/clipboard/RenderingCapabilities.hpp>
 #include <com/sun/star/datatransfer/clipboard/XClipboardNotifier.hpp>
 #include <com/sun/star/datatransfer/clipboard/XClipboardListener.hpp>
@@ -1085,7 +1085,7 @@
 #include <com/sun/star/util/XURLTransformer.hpp>
 #include <com/sun/star/util/XBinaryDataContainer.hpp>
 #include <com/sun/star/util/XRefreshListener.hpp>
-// #include <com/sun/star/util/XTheme.hpp> . // 7.6
+// #include <com/sun/star/util/XTheme.hpp>  // 7.6
 #include <com/sun/star/util/XCloseable.hpp>
 #include <com/sun/star/util/DateTime.hpp>
 #include <com/sun/star/util/XIndent.hpp>
@@ -1138,7 +1138,7 @@
 #include <com/sun/star/util/AtomClassRequest.hpp>
 #include <com/sun/star/util/XSearchDescriptor.hpp>
 #include <com/sun/star/util/XMergeable.hpp>
-// #include <com/sun/star/util/XComplexColor.hpp> . // 7.6
+// #include <com/sun/star/util/XComplexColor.hpp>  // 7.6
 #include <com/sun/star/util/XModeChangeApproveListener.hpp>
 #include <com/sun/star/util/InvalidStateException.hpp>
 #include <com/sun/star/util/XUniqueIDFactory.hpp>
@@ -1876,7 +1876,7 @@
 #include <com/sun/star/awt/XStyleSettings.hpp>
 #include <com/sun/star/awt/XToolkitRobot.hpp>
 #include <com/sun/star/awt/XDialog2.hpp>
-// #include <com/sun/star/awt/ColorStop.hpp> . // 7.6
+// #include <com/sun/star/awt/ColorStop.hpp>  // 7.6
 #include <com/sun/star/awt/XMenuListener.hpp>
 #include <com/sun/star/awt/XUnoControlContainer.hpp>
 #include <com/sun/star/awt/XAnimation.hpp>
@@ -1923,7 +1923,7 @@
 #include <com/sun/star/awt/XWindowListener.hpp>
 #include <com/sun/star/awt/WindowDescriptor.hpp>
 #include <com/sun/star/awt/XFont.hpp>
-// #include <com/sun/star/awt/Gradient2.hpp> . // 7.6
+// #include <com/sun/star/awt/Gradient2.hpp>  // 7.6
 #include <com/sun/star/awt/XSpinListener.hpp>
 #include <com/sun/star/awt/XFixedHyperlink.hpp>
 #include <com/sun/star/awt/XPopupMenu.hpp>
@@ -1933,7 +1933,7 @@
 #include <com/sun/star/awt/XSpinValue.hpp>
 #include <com/sun/star/awt/XControlModel.hpp>
 #include <com/sun/star/awt/MenuItemType.hpp>
-// #include <com/sun/star/awt/ColorStopSequence.hpp> . // 7.6
+// #include <com/sun/star/awt/ColorStopSequence.hpp>  // 7.6
 #include <com/sun/star/awt/XRequestCallback.hpp>
 #include <com/sun/star/awt/MouseEvent.hpp>
 #include <com/sun/star/awt/FontEmphasisMark.hpp>

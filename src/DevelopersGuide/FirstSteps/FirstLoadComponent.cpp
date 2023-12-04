@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 #include <libreoffice.hpp>
 
-using css::uno::XInterface;
-
 template <typename T>
 using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack
 
@@ -16,7 +14,7 @@ int main()
         Ref<css::uno::XComponentContext> context = cppu::bootstrap();
         Ref<css::lang::XMultiComponentFactory> factory = context->getServiceManager();
 
-        Ref<XInterface> desktop = factory->createInstanceWithContext("com.sun.star.frame.Desktop", context);
+        Ref<css::uno::XInterface> desktop = factory->createInstanceWithContext("com.sun.star.frame.Desktop", context);
         Ref<css::frame::XComponentLoader> loader(desktop, css::uno::UNO_QUERY);
         Seq<css::beans::PropertyValue> properties(0);
         Ref<css::lang::XComponent> component = loader->loadComponentFromURL("private:factory/scalc", "_blank", 0, properties);
