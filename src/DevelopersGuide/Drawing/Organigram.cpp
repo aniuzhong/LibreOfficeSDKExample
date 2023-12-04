@@ -41,12 +41,6 @@ int main()
         int draw_width = page_width - page_border_left - page_border_right;
         int hor_center = page_border_left + draw_width / 2;
 
-        std::cout << page_width << '\n';
-        std::cout << page_height << '\n';
-        std::cout << page_border_top << '\n';
-        std::cout << page_border_left << '\n';
-        std::cout << page_border_right << '\n';
-
         // Data for organigram
         rtl::OUString org_units[2][4];
         org_units[0][0] = "Management";  // level 0
