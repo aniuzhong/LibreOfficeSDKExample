@@ -27,8 +27,9 @@ add_compile_definitions(DGCC)
 add_compile_definitions(LINUX)
 add_compile_definitions(DCPPU_ENV=gcc3)
 
-add_subdirectory(src/DevelopersGuide/FirstSteps)
-add_subdirectory(src/DevelopersGuide/ProfUNO)
-add_subdirectory(src/DevelopersGuide/Drawing)
-add_subdirectory(src/utilities)
+add_subdirectory(examples/DevelopersGuide/FirstSteps)
+add_subdirectory(examples/DevelopersGuide/ProfUNO)
+add_subdirectory(examples/DevelopersGuide/Drawing)
+add_subdirectory(examples/cpp/Draw)
+add_subdirectory(utilities)
 

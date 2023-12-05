@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 #include <libreoffice.hpp>
 
-using css::beans::PropertyValue;
-
 template <typename T>
 using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack
 
@@ -65,7 +63,7 @@ int main()
         Ref<css::uno::XInterface> desktop = factory->createInstanceWithContext("com.sun.star.frame.Desktop", context);
         Ref<css::frame::XComponentLoader> loader(desktop, css::uno::UNO_QUERY);
 
-        Seq<PropertyValue> load_props(1);
+        Seq<css::beans::PropertyValue> load_props(1);
         load_props[0].Name = "Silent";
         load_props[0].Value = css::uno::Any(true);
         Ref<css::lang::XComponent> draw_doc = loader->loadComponentFromURL("private:factory/simpress", "_blank", 0, load_props);
@@ -109,6 +107,14 @@ int main()
         shapes = Ref<css::drawing::XShapes>(page, css::uno::UNO_QUERY);
         set_slide_transition(page, css::presentation::FadeEffect::FadeEffect_ROLL_FROM_LEFT, css::presentation::AnimationSpeed::AnimationSpeed_MEDIUM, 2, 0);
         Ref<css::drawing::XShape> shape = create_shape(draw_doc, {1000, 8000}, {5000, 5000}, "com.sun.star.drawing.EllipseShape");
+        shapes->add(shape);
+        add_portion(shape, "click to go", false);
+        add_portion(shape, "to the first page", true);
+        shape_prop_set = Ref<css::beans::XPropertySet>(shape, css::uno::UNO_QUERY);
+        shape_prop_set->setPropertyValue("Effect", css::uno::Any(css::presentation::AnimationEffect::AnimationEffect_FADE_FROM_BOTTOM));
+        shape_prop_set->setPropertyValue("OnClick", css::uno::Any(css::presentation::ClickAction::ClickAction_FIRSTPAGE));
+
+        shape = create_shape(draw_doc, {22000, 8000}, {5000, 5000}, "com.sun.star.drawing.RectangleShape");
         shapes->add(shape);
         add_portion(shape, "click to go", false);
         add_portion(shape, "to the second page", true);

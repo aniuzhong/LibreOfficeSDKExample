@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 #include <libreoffice.hpp>
 
-using css::beans::PropertyValue;
-
 template <typename T>
 using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack
 
@@ -19,7 +17,7 @@ int main()
         Ref<css::uno::XInterface> desktop = factory->createInstanceWithContext("com.sun.star.frame.Desktop", ctx);
         Ref<css::frame::XComponentLoader> loader(desktop, css::uno::UNO_QUERY);
 
-        Seq<PropertyValue> load_props(0);
+        Seq<css::beans::PropertyValue> load_props(0);
         Ref<css::lang::XComponent> draw_doc = loader->loadComponentFromURL("private:factory/sdraw", "_blank", 0, load_props);
 
         // Get draw page by index

@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 #include <libreoffice.hpp>
 
-using css::uno::XInterface;
-
 template <typename T>
 using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack
 
@@ -31,7 +29,7 @@ int main(int argc, char *argv[])
         Ref<css::bridge::XUnoUrlResolver> url_resolver(factory->createInstanceWithContext("com.sun.star.bridge.UnoUrlResolver", context), css::uno::UNO_QUERY);
 
         // Import the object
-        Ref<XInterface> object = url_resolver->resolve(rtl::OUString::createFromAscii(argv[1]));
+        Ref<css::uno::XInterface> object = url_resolver->resolve(rtl::OUString::createFromAscii(argv[1]));
 
         if (object != nullptr) {
             std::cout << "initial object successfully retrieved\n";
