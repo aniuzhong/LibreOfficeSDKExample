@@ -30,6 +30,6 @@ add_compile_definitions(DCPPU_ENV=gcc3)
 add_subdirectory(examples/DevelopersGuide/FirstSteps)
 add_subdirectory(examples/DevelopersGuide/ProfUNO)
 add_subdirectory(examples/DevelopersGuide/Drawing)
-add_subdirectory(examples/cpp/Draw)
+add_subdirectory(examples/DevelopersGuide/OfficeDev)
+add_subdirectory(impress)
 add_subdirectory(utilities)
-
