@@ -1,5 +1,9 @@
-#include <bits/stdc++.h>
-#include <libreoffice.hpp>
+#include <iostream>
+
+#include <cppuhelper/bootstrap.hxx>
+#include <com/sun/star/lang/XMultiComponentFactory.hpp>
+#include <com/sun/star/bridge/XUnoUrlResolver.hpp>
+#include <com/sun/star/lang/IllegalAccessException.hpp>
 
 template <typename T>
 using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack

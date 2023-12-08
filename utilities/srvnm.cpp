@@ -1,5 +1,7 @@
-#include <bits/stdc++.h>
-#include <libreoffice.hpp>
+#include <iostream>
+
+#include <cppuhelper/bootstrap.hxx>
+#include <com/sun/star/lang/XMultiComponentFactory.hpp>
 
 // note: css::uno::Reference should be allocated on stack
 template <typename T>

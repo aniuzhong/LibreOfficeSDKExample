@@ -1,5 +1,18 @@
-#include <bits/stdc++.h>
-#include <libreoffice.hpp>
+#include <iostream>
+
+#include <cppuhelper/bootstrap.hxx>
+#include <com/sun/star/lang/XMultiComponentFactory.hpp>
+#include <com/sun/star/frame/XModel.hpp>
+#include <com/sun/star/frame/XComponentLoader.hpp>
+#include <com/sun/star/sheet/XSpreadsheet.hpp>
+#include <com/sun/star/sheet/XSpreadsheetView.hpp>
+#include <com/sun/star/sheet/XSpreadsheetDocument.hpp>
+#include <com/sun/star/sheet/XCellRangesQuery.hpp>
+#include <com/sun/star/sheet/XCellAddressable.hpp>
+#include <com/sun/star/sheet/CellFlags.hpp>
+#include <com/sun/star/beans/XPropertySet.hpp>
+#include <com/sun/star/container/XEnumerationAccess.hpp>
+#include <com/sun/star/table/CellVertJustify.hpp>
 
 template <typename T>
 using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack

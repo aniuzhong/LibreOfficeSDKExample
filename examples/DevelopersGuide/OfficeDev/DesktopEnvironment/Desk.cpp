@@ -1,9 +1,42 @@
-#include <bits/stdc++.h>
-#include <libreoffice.hpp>
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <cstddef>
+#include <iostream>
+#include <thread>
+
+#include <com/sun/star/awt/Rectangle.hpp>
+// #include <com/sun/star/awt/XToolkit.hpp>
+// #include <com/sun/star/awt/XToolkit2.hpp>
+// #include <com/sun/star/awt/XToolkit3.hpp>
+#include <com/sun/star/awt/XToolkitExperimental.hpp>
+#include <com/sun/star/awt/XWindow.hpp>
+#include <com/sun/star/awt/XWindowPeer.hpp>
+#include <com/sun/star/awt/WindowDescriptor.hpp>
+#include <com/sun/star/awt/WindowAttribute.hpp>
+#include <com/sun/star/awt/XSystemChildFactory.hpp>
+#include <com/sun/star/beans/PropertyValue.hpp>
+#include <com/sun/star/frame/XComponentLoader.hpp>
+#include <com/sun/star/frame/XFrame.hpp>
+#include <com/sun/star/frame/XFrames.hpp>
+#include <com/sun/star/frame/XFramesSupplier.hpp>
+#include <com/sun/star/lang/XComponent.hpp>
+#include <com/sun/star/lang/XMultiComponentFactory.hpp>
+#include <com/sun/star/uno/XComponentContext.hpp>
+#include <com/sun/star/uno/XInterface.hpp>
+#include <osl/file.hxx>
+#include <rtl/ustring.hxx>
+#include <cppuhelper/bootstrap.hxx>
+#include <com/sun/star/frame/FrameSearchFlag.hpp>
+#include <com/sun/star/lang/SystemDependent.hpp>
 
 using css::awt::Rectangle;
 using css::awt::WindowDescriptor;
-using css::awt::XToolkit;
+using css::awt::XSystemChildFactory;
+// using css::awt::XToolkit;
+// using css::awt::XToolkit2;
+// using css::awt::XToolkit3;
+using css::awt::XToolkitExperimental;
 using css::awt::XWindow;
 using css::awt::XWindowPeer;
 using css::awt::WindowClass::WindowClass_TOP;
@@ -38,7 +71,6 @@ int main(int argc, char *argv[])
     FileBase::getFileURLFromSystemPath(path, url);
 
     Ref<XComponentContext> ctx = cppu::bootstrap();
-    // Ref<XMultiComponentFactory> fact = ctx->getServiceManager();
 
     // Create the view frame for showing the office documents on demand.
 
@@ -50,7 +82,7 @@ int main(int argc, char *argv[])
     // Create an office window then
 
     // Get access to toolkit of remote office to create the container window of new target frame
-    Ref<XToolkit> toolkit(ctx->getServiceManager()->createInstanceWithContext("com.sun.star.awt.Toolkit", ctx), UNO_QUERY);
+    Ref<XToolkitExperimental> toolkit(ctx->getServiceManager()->createInstanceWithContext("com.sun.star.awt.Toolkit", ctx), UNO_QUERY);
     if (toolkit != nullptr)
         std::cout << "got toolkit..\n";
 
@@ -88,8 +120,20 @@ int main(int argc, char *argv[])
     frame->setName(target);
     Seq<PropertyValue> load_props(0);
     Ref<XComponentLoader> loader(ctx->getServiceManager()->createInstanceWithContext("com.sun.star.frame.Desktop", ctx), UNO_QUERY);
-    
     std::this_thread::sleep_for(std::chrono::seconds(3));
     Ref<XComponent> doc = loader->loadComponentFromURL(url, target, css::frame::FrameSearchFlag::CHILDREN, load_props);
     frame->setName(frame_name);
+
+    // Ref<XSystemChildFactory> child_factory(toolkit, UNO_QUERY);
+    // if (child_factory != nullptr)
+    //     std::cout << "child_factory created..\n";
+
+    // Display *display = XOpenDisplay(NULL);
+    // int screen = DefaultScreen(display);
+    // sal_Int64 xid = XCreateSimpleWindow(display, RootWindow(display, screen), 10, 10, 100, 100, 1, BlackPixel(display, screen), WhitePixel(display, screen));
+    // try {
+    //     child_factory->createSystemChild(css::uno::Any(xid), Seq<sal_Int8>(), css::lang::SystemDependent::SYSTEM_XWINDOW);
+    // } catch (css::uno::Exception &e) {
+    //     std::cout << e.Message << '\n';
+    // }
 }

@@ -1,5 +1,21 @@
-#include <bits/stdc++.h>
-#include <libreoffice.hpp>
+#include <iostream>
+
+#include <cppuhelper/bootstrap.hxx>
+#include <com/sun/star/lang/XMultiComponentFactory.hpp>
+#include <com/sun/star/lang/XMultiServiceFactory.hpp>
+#include <com/sun/star/lang/XComponent.hpp>
+#include <com/sun/star/lang/XServiceInfo.hpp>
+#include <com/sun/star/frame/XComponentLoader.hpp>
+#include <com/sun/star/drawing/XDrawPagesSupplier.hpp>
+#include <com/sun/star/beans/XPropertySet.hpp>
+#include <com/sun/star/text/XText.hpp>
+#include <com/sun/star/text/ControlCharacter.hpp>
+#include <com/sun/star/presentation/XPresentationSupplier.hpp>
+#include <com/sun/star/presentation/AnimationEffect.hpp>
+#include <com/sun/star/presentation/ClickAction.hpp>
+#include <com/sun/star/presentation/FadeEffect.hpp>
+#include <com/sun/star/presentation/AnimationSpeed.hpp>
+#include <com/sun/star/container/XNamed.hpp>
 
 template <typename T>
 using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack
