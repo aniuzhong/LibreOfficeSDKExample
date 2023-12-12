@@ -9,7 +9,7 @@ SortIncludes: false
 
 BreakBeforeBraces: Custom
 BraceWrapping:
-  # AfterClass: true
+  AfterClass: false
   AfterControlStatement: false
   # AfterEnum: true
   AfterFunction: true
