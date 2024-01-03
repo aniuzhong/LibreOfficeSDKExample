@@ -6,7 +6,7 @@
 #include <com/sun/star/lang/IllegalAccessException.hpp>
 
 template <typename T>
-using Ref = css::uno::Reference<T>; // note: css::uno::Reference should be allocated on stack
+using Ref = css::uno::Reference<T>;
 
 template <typename T>
 using Seq = css::uno::Sequence<T>;

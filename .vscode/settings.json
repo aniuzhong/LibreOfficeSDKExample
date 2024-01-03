@@ -1,0 +1,11 @@
+{
+    "cmake.configureSettings": {
+        // "SDK_INCLUDE_DIR": "/home/aniu/libreoffice/instdir/sdk/include",
+        // "SDK_LIBRARY_DIR": "/home/aniu/libreoffice/instdir/sdk/lib",
+        // "SDK_BINARY_DIR": "/home/aniu/libreoffice/instdir/bin",
+        // "SDK_PROGRAM_DIR": "/home/aniu/libreoffice/instdir/program",
+    },
+    "files.associations": {
+        "*.hdl": "cpp"
+    },
+}
